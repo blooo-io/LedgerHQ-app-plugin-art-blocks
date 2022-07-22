@@ -19,13 +19,13 @@ const NANOS_ETH_PATH = Resolve("elfs/ethereum_nanos.elf");
 const NANOSP_ETH_PATH = Resolve("elfs/ethereum_nanosp.elf");
 const NANOX_ETH_PATH = Resolve("elfs/ethereum_nanox.elf");
 
-const NANOS_PLUGIN_PATH = Resolve("elfs/ledger_nft_nanos.elf");
-const NANOSP_PLUGIN_PATH = Resolve("elfs/ledger_nft_nanosp.elf");
-const NANOX_PLUGIN_PATH = Resolve("elfs/ledger_nft_nanox.elf");
+const NANOS_PLUGIN_PATH = Resolve("elfs/art_blocks_nanos.elf");
+const NANOSP_PLUGIN_PATH = Resolve("elfs/art_blocks_nanosp.elf");
+const NANOX_PLUGIN_PATH = Resolve("elfs/art_blocks_nanox.elf");
 
-const NANOS_PLUGIN = { LedgerNFT: NANOS_PLUGIN_PATH };
-const NANOSP_PLUGIN = { LedgerNFT: NANOSP_PLUGIN_PATH };
-const NANOX_PLUGIN = { LedgerNFT: NANOX_PLUGIN_PATH };
+const NANOS_PLUGIN = { ArtBlocks: NANOS_PLUGIN_PATH };
+const NANOSP_PLUGIN = { ArtBlocks: NANOSP_PLUGIN_PATH };
+const NANOX_PLUGIN = { ArtBlocks: NANOX_PLUGIN_PATH };
 
 
 const RANDOM_ADDRESS = "0xaaaabbbbccccddddeeeeffffgggghhhhiiiijjjj";

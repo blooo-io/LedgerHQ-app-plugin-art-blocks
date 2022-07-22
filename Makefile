@@ -29,7 +29,7 @@ APPVERSION_N     = 0
 APPVERSION_P     = 0
 APPVERSION       = $(APPVERSION_M).$(APPVERSION_N).$(APPVERSION_P)
 
-APPNAME = "LedgerNFT"
+APPNAME = "ArtBlocks"
 
 #prepare hsm generation
 ifeq ($(TARGET_NAME), TARGET_NANOS)

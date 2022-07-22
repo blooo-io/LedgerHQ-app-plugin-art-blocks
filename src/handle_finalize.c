@@ -1,10 +1,16 @@
-#include "ledger_nft_plugin.h"
+#include "art_blocks_plugin.h"
 
 void handle_finalize(void *parameters) {
     ethPluginFinalize_t *msg = (ethPluginFinalize_t *) parameters;
     msg->uiType = ETH_UI_TYPE_GENERIC;
-
-    // 2 additional screens are required to display the `token and `beneficiary` fields
-    msg->numScreens = 1;
+    artblock_parameters_t *context = (artblock_parameters_t *) msg->pluginContext;
+    switch (context->selectorIndex) {
+        case PURCHASE:
+            msg->numScreens = 1;
+            break;
+        case PURCHASE_TO:
+            msg->numScreens = 2;
+            break;
+    }
     msg->result = ETH_PLUGIN_RESULT_OK;
 }
