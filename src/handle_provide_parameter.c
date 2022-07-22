@@ -2,9 +2,7 @@
 
 static void handle_address_to(ethPluginProvideParameter_t *msg, artblock_parameters_t *context) {
     memset(context->address_to, 0, sizeof(context->address_to));
-    memcpy(context->address_to,
-           &msg->parameter[PARAMETER_LENGTH - ADDRESS_LENGTH],
-           ADDRESS_LENGTH);
+    memcpy(context->address_to, &msg->parameter[PARAMETER_LENGTH - ADDRESS_LENGTH], ADDRESS_LENGTH);
     printf_hex_array("Address To: ", ADDRESS_LENGTH, context->address_to);
 }
 

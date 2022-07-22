@@ -13,5 +13,4 @@ void handle_finalize(void *parameters) {
             break;
     }
     msg->result = ETH_PLUGIN_RESULT_OK;
-    
 }
