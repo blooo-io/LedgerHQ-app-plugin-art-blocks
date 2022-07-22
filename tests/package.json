@@ -16,7 +16,7 @@
     "@ledgerhq/hw-app-eth": "^6.27.1",
     "@ledgerhq/hw-transport-http": "^6.27.1",
     "@ledgerhq/logs": "^6.2.0",
-    "@zondax/zemu": "^0.29.0",
+    "@zondax/zemu": "^0.32.0",
     "bignumber.js": "^9.0.0",
     "bip32-path": "^0.4.2",
     "core-js": "^3.7.0",
