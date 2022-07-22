@@ -1,6 +1,6 @@
 #include "art_blocks_plugin.h"
 
-static void handle_amount_to(ethPluginProvideParameter_t *msg, artblock_parameters_t *context) {
+static void handle_address_to(ethPluginProvideParameter_t *msg, artblock_parameters_t *context) {
     memset(context->address_to, 0, sizeof(context->address_to));
     memcpy(context->address_to,
            &msg->parameter[PARAMETER_LENGTH - ADDRESS_LENGTH],
@@ -11,7 +11,7 @@ static void handle_amount_to(ethPluginProvideParameter_t *msg, artblock_paramete
 static void handle_purchase_to(ethPluginProvideParameter_t *msg, artblock_parameters_t *context) {
     switch (context->next_param) {
         case ADDRESS_TO:
-            handle_amount_to(msg, context);
+            handle_address_to(msg, context);
             context->next_param = NONE;
             break;
         case NONE:

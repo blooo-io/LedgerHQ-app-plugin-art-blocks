@@ -33,6 +33,7 @@ void handle_init_contract(void *parameters) {
     // Set `next_param` to be the first field we expect to parse.
     switch (context->selectorIndex) {
         case PURCHASE:
+            break;
         case PURCHASE_TO:
             context->next_param = ADDRESS_TO;
             break;
