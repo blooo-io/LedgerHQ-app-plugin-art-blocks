@@ -2,7 +2,7 @@ import { processTest, populateTransaction } from "./test.fixture";
 
 const contractName = "MinterSetPriceERC20V0";
 
-const testLabel = "Purchase"; // <= Name of the test
+const testLabel = "Purchase To"; // <= Name of the test
 const testDirSuffix = "purchase_to"; // <= directory to compare device snapshots to
 const signedPlugin = false;
 const testNetwork= "ethereum";
