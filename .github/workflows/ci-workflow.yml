@@ -180,31 +180,31 @@ jobs:
           name: binaries
           path: tests/elfs/ethereum_nanos.elf
 
-  job_build_ethereum_nano_sp:
-    name: Build Ethereum application for Nano S+ testing
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
-    steps:
-      - name: Checkout app-ethereum
-        uses: actions/checkout@v2
-        with:
-          repository: LedgerHQ/app-ethereum
-          ref: ${{ ((github.base_ref || github.ref_name) == 'main' && 'master') || (github.base_ref || github.ref_name) }}
-          submodules: recursive
-      - name: Build ethereum
-        run: |
-          make clean
-          make -j DEBUG=1 BYPASS_SIGNATURES=1 BOLOS_SDK=$NANOSP_SDK CHAIN=ethereum ALLOW_DATA=1
-      - name: Move binary to test directory
-        run: |
-          mkdir -p ./tests/elfs/
-          mv bin/app.elf ./tests/elfs/ethereum_nanosp.elf
-      - name: Upload plugin binary
-        uses: actions/upload-artifact@v2
-        with:
-          name: binaries
-          path: tests/elfs/ethereum_nanosp.elf
+  # job_build_ethereum_nano_sp:
+  #   name: Build Ethereum application for Nano S+ testing
+  #   runs-on: ubuntu-latest
+  #   container:
+  #     image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+  #   steps:
+  #     - name: Checkout app-ethereum
+  #       uses: actions/checkout@v2
+  #       with:
+  #         repository: LedgerHQ/app-ethereum
+  #         ref: ${{ ((github.base_ref || github.ref_name) == 'main' && 'master') || (github.base_ref || github.ref_name) }}
+  #         submodules: recursive
+  #     - name: Build ethereum
+  #       run: |
+  #         make clean
+  #         make -j DEBUG=1 BYPASS_SIGNATURES=1 BOLOS_SDK=$NANOSP_SDK CHAIN=ethereum ALLOW_DATA=1
+  #     - name: Move binary to test directory
+  #       run: |
+  #         mkdir -p ./tests/elfs/
+  #         mv bin/app.elf ./tests/elfs/ethereum_nanosp.elf
+  #     - name: Upload plugin binary
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         name: binaries
+  #         path: tests/elfs/ethereum_nanosp.elf
 
   job_build_ethereum_nano_x:
     name: Build Ethereum application for Nano X testing
@@ -238,7 +238,7 @@ jobs:
       - job_build_debug_nano_sp
       - job_build_debug_nano_x
       - job_build_ethereum_nano_s
-      - job_build_ethereum_nano_sp
+      # - job_build_ethereum_nano_sp
       - job_build_ethereum_nano_x
     runs-on: ubuntu-latest
     steps:
