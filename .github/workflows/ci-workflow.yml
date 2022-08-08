@@ -106,29 +106,29 @@ jobs:
           name: binaries
           path: tests/elfs/art_blocks_nanos.elf
 
-  job_build_debug_nano_sp:
-    name: Build debug Nano S+
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
-    steps:
-      - name: Clone
-        uses: actions/checkout@v2
-        with:
-          submodules: recursive
-      - name: Build plugin for Nano S+
-        run: |
-          make clean
-          make BOLOS_SDK=$NANOSP_SDK
-      - name: Move binary to test directory
-        run: |
-          mkdir -p ./tests/elfs/
-          mv bin/app.elf ./tests/elfs/art_blocks_nanosp.elf
-      - name: Upload plugin binary
-        uses: actions/upload-artifact@v2
-        with:
-          name: binaries
-          path: tests/elfs/art_blocks_nanosp.elf
+  # job_build_debug_nano_sp:
+  #   name: Build debug Nano S+
+  #   runs-on: ubuntu-latest
+  #   container:
+  #     image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+  #   steps:
+  #     - name: Clone
+  #       uses: actions/checkout@v2
+  #       with:
+  #         submodules: recursive
+  #     - name: Build plugin for Nano S+
+  #       run: |
+  #         make clean
+  #         make BOLOS_SDK=$NANOSP_SDK
+  #     - name: Move binary to test directory
+  #       run: |
+  #         mkdir -p ./tests/elfs/
+  #         mv bin/app.elf ./tests/elfs/art_blocks_nanosp.elf
+  #     - name: Upload plugin binary
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         name: binaries
+  #         path: tests/elfs/art_blocks_nanosp.elf
 
   job_build_debug_nano_x:
     name: Build debug Nano X
