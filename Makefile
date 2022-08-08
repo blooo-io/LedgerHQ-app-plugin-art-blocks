@@ -33,9 +33,9 @@ APPNAME = "ArtBlocks"
 
 #prepare hsm generation
 ifeq ($(TARGET_NAME), TARGET_NANOS)
-ICONNAME=icons/nanos_app_ledgernft.gif
+ICONNAME=icons/nanos_app_artblocks.gif
 else
-ICONNAME=icons/nanox_app_ledgernft.gif
+ICONNAME=icons/nanox_app_artblocks.gif
 endif
 
 ################

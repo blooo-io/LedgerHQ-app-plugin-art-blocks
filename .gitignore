@@ -25,3 +25,4 @@ tests/snapshots-tmp
 
 #Vscode
 .vscode/
+.DS_Store
