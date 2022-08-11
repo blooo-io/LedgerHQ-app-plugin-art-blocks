@@ -7,7 +7,7 @@ const testDirSuffix = "purchase"; // <= directory to compare device snapshots to
 const signedPlugin = false;
 const testNetwork= "ethereum";
 
-const contractAddr = "0x48742d38a0809135efd643c1150bfc13768c3907";
+const contractAddr = "0x1dec9e52f1320f7deb29cbcd7b7d67f3df785142";
 const chainID = 1;
 
 const selector = "0xefef39a1";
