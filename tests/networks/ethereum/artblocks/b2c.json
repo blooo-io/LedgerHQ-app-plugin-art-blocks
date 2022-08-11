@@ -2,8 +2,8 @@
     "chainId": 1,
     "contracts": [
         {
-            "address": "0x48742d38a0809135efd643c1150bfc13768c3907",
-            "contractName": "MinterSetPriceERC20V0",
+            "address": "0x1dec9e52f1320f7deb29cbcd7b7d67f3df785142",
+            "contractName": "MinterSetPriceV0",
             "selectors": {
                 "0xefef39a1": {
                     "erc20OfInterest": [],

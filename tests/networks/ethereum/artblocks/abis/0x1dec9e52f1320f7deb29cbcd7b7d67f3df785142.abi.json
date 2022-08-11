@@ -82,25 +82,6 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_projectId",
-                "type": "uint256"
-            }
-        ],
-        "name": "checkYourAllowanceOfProjectERC20",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "remaining",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
                 "name": "",
                 "type": "uint256"
             }
@@ -158,25 +139,6 @@
                 "internalType": "address",
                 "name": "currencyAddress",
                 "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_projectId",
-                "type": "uint256"
-            }
-        ],
-        "name": "getYourBalanceOfProjectERC20",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "balance",
-                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -422,29 +384,6 @@
             }
         ],
         "name": "updatePricePerTokenInWei",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_projectId",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "_currencySymbol",
-                "type": "string"
-            },
-            {
-                "internalType": "address",
-                "name": "_currencyAddress",
-                "type": "address"
-            }
-        ],
-        "name": "updateProjectCurrencyInfo",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
