@@ -28,7 +28,7 @@ void handle_init_contract(void *parameters) {
     }
     if (i == NUM_SELECTORS) {
         msg->result = ETH_PLUGIN_RESULT_UNAVAILABLE;
-        return
+        return;
     }
 
     // Set `next_param` to be the first field we expect to parse.
