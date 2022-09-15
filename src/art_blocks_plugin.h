@@ -6,7 +6,6 @@
 
 #define NUM_SELECTORS    2
 #define PLUGIN_NAME      "ArtBlocks"
-#define TOKEN_FOUND      1 << 1
 #define SELECTOR_SIZE    4
 #define PARAMETER_LENGTH 32
 #define RUN_APPLICATION  1
@@ -48,9 +47,7 @@ typedef struct artblocks_parameters_t {
     uint16_t offset;
     uint16_t checkpoint;
     uint8_t skip;
-    uint8_t decimals;
     uint8_t next_param;
-    uint8_t tokens_found;
 
     // For both parsing and display.
     selector_t selectorIndex;
