@@ -26,7 +26,7 @@ void handle_provide_parameter(void *parameters) {
     artblock_parameters_t *context = (artblock_parameters_t *) msg->pluginContext;
 
     msg->result = ETH_PLUGIN_RESULT_OK;
-    
+
     switch (context->selectorIndex) {
         case PURCHASE:
             break;
