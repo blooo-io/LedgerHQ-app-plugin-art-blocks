@@ -42,7 +42,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+        with: 
+          submodules: recursive
+          
       - name: Build with Clang Static Analyzer
         run: |
           git config --global --add safe.directory /__w/LedgerHQ-app-plugin-art-blocks/LedgerHQ-app-plugin-art-blocks

@@ -44,9 +44,6 @@ typedef struct artblocks_parameters_t {
     char ticker_sent[MAX_TICKER_LEN];
 
     // For parsing data.
-    uint16_t offset;
-    uint16_t checkpoint;
-    uint8_t skip;
     uint8_t next_param;
 
     // For both parsing and display.
