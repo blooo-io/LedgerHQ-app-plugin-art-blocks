@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-builder:master
 
     steps:
       - name: Clone
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-builder:master
 
     steps:
       - uses: actions/checkout@v2
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-scanner:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-scanner:master
 
     steps:
       - uses: actions/checkout@v2
@@ -80,7 +80,7 @@ jobs:
             --form file=@cov-int.tar.gz \
             --form version=master \
             --form description="Art Blocks Plugin" \
-            https://scan.coverity.com/builds?project=LedgerHQ%2Fapp-plugin-artblocks
+            https://scan.coverity.com/builds?project=blooo-io%2FLedgerHQ-app-plugin-art-blocks
         env:
           EMAIL: ${{ secrets.COVERITY_SCAN_EMAIL }}
           TOKEN: ${{ secrets.COVERITY_SCAN_TOKEN }}
@@ -88,7 +88,7 @@ jobs:
     name: Build debug Nano S
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-builder:master
     steps:
       - name: Clone
         uses: actions/checkout@v2
@@ -113,7 +113,7 @@ jobs:
     name: Build debug Nano S+
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-builder:master
     steps:
       - name: Clone
         uses: actions/checkout@v2
@@ -138,7 +138,7 @@ jobs:
     name: Build debug Nano X
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-builder:master
     steps:
       - name: Clone
         uses: actions/checkout@v2
@@ -163,7 +163,7 @@ jobs:
     name: Build Ethereum application for Nano S testing
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-builder:master
     steps:
       - name: Checkout app-ethereum
         uses: actions/checkout@v2
@@ -190,7 +190,7 @@ jobs:
     name: Build Ethereum application for Nano S+ testing
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-builder:master
     steps:
       - name: Checkout app-ethereum
         uses: actions/checkout@v2
@@ -217,7 +217,7 @@ jobs:
     name: Build Ethereum application for Nano X testing
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-builder:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-builder:master
     steps:
       - name: Checkout app-ethereum
         uses: actions/checkout@v2
