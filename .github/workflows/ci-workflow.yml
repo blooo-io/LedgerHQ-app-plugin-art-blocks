@@ -62,13 +62,14 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: ghcr.io/ledgerhq/ledger-app-builder/ledger-app-scanner:latest
+      image: ghcr.io/blooo-io/ledger-app-builder/ledger-app-scanner:master
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Build with cov-build
         run: |
+          git config --global --add safe.directory /__w/LedgerHQ-app-plugin-art-blocks/LedgerHQ-app-plugin-art-blocks
           make clean
           cov-build --dir cov-int make default
       - name: Submit the result to Coverity Scan
@@ -80,7 +81,7 @@ jobs:
             --form file=@cov-int.tar.gz \
             --form version=master \
             --form description="Art Blocks Plugin" \
-            https://scan.coverity.com/builds?project=LedgerHQ%2Fapp-plugin-artblocks
+            https://scan.coverity.com/builds?project=blooo-io%2FLedgerHQ-app-plugin-art-blocks
         env:
           EMAIL: ${{ secrets.COVERITY_SCAN_EMAIL }}
           TOKEN: ${{ secrets.COVERITY_SCAN_TOKEN }}
